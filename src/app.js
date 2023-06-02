@@ -22,10 +22,8 @@ function newExcuse() {
   let words = [who, action, what, when];
   for (let i = 0; i < words.length; i++) {
     let randomNumber = Math.floor(Math.random() * words[i].length);
-    console.log(
-      words[i] + " the selection from this list is in position " + randomNumber
-    );
-    str += words[i][randomNumber] + randomNumber;
+    str += words[i][randomNumber];
+    //Adding a space between words below except to the last one.
     if (i + 1 < words.length) {
       str += " ";
     }
